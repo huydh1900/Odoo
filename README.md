@@ -8,6 +8,16 @@
     def get_view(self, view_id=None, view_type='form', **options):
         res = super().get_view(view_id, view_type, **options)
         user = self.env.user
+
+
+- Lấy context qua action_id 
+        action_id = options.get('action_id')
+        if action_id:
+            action = self.sudo().env['ir.actions.act_window'].browse(action_id)
+
+            action_context = action.context
+            print(action_context)
+        
         if view_type == 'tree':
             doc = etree.XML(res['arch'])
             if user.has_group('boni_mrp.group_mrp_user_view_only') and not user.has_group('boni_mrp.group_mrp_user_the_reviewer'):
