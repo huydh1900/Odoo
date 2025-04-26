@@ -36,3 +36,6 @@
 # Git
 git clone https://oauth2:ACESS_TOKEN@gitlab.hebela.vn/erp/bonita.git
 
+# Scaffold
++ Window: python  C:\Users\Acer\PycharmProjects\odoo\odoo-bin scaffold dashboard C:\Users\Acer\PycharmProjects\odoo\module_linhtinh
+
